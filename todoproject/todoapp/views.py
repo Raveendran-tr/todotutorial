@@ -53,5 +53,5 @@ def update(request,id):
     frm=ToDoForm(request.POST or None,instance=task)
     if frm.is_valid():
             frm.save()
-            redirect('/')
+            return redirect('/')
     return render(request,"update.html",{'frm':frm,'task':task})

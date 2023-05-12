@@ -4,7 +4,7 @@ from django.urls import path, include
 from todoapp import views
 
 urlpatterns = [
-    path('',views.todo1,name='index'),
+    path('',views.todo1,name='todo1'),
     path('delete/<int:taskid>/', views.delete, name="delete"),
     path('update/<int:id>/', views.update, name='update'),
     path('cbvhome/',views.TaskListView.as_view(),name='cbvhome'),
